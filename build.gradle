@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+war {
+    archiveFileName =  'app.war'
+}
+group 'com.myproject'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'javax:javaee-api:8.0'
+    implementation 'org.slf4j:slf4j-api:1.7.28'
+    implementation 'org.postgresql:postgresql:42.2.8'
+    implementation 'org.hibernate:hibernate-core:5.4.6.Final'
+    implementation 'org.hibernate:hibernate-hikaricp:5.4.6.Final'
+    implementation 'com.zaxxer:HikariCP:3.4.1'
+  //  implementation 'org.liquibase:liquibase-core:3.8.4'
+//    implementation 'org.liquibase:liquibase-cdi:3.8.4'
+    implementation 'org.springframework.security:spring-security-crypto:5.2.1.RELEASE'
+
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
+    providedCompile group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.1'
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+
+    compile group: 'javax.servlet.jsp.jstl', name: 'javax.servlet.jsp.jstl-api', version: '1.2.1'
+
+    compile group: 'taglibs', name: 'standard', version: '1.1.2'
+
+    compile group: 'org.springframework', name: 'spring-orm', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.2.1.RELEASE'
+
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.1.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-cas', version: '5.2.1.RELEASE'
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.1.1'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.1'
+
+}
